@@ -7,4 +7,4 @@ python train.py --device 0 \
     --start_epoch 0 \
     --lr 1e-5 --min_lr 1e-6 --lr_rate 0.3 --decay_margin 0.033 --decay_rate 0.82 --nepoch 60 --warm_epoch 1 \
     --filter_enhance \
-    --pretrain /checkpoints/m8p4_filter.pth \
+    --pretrain /home/zixun/Documents/DigitalTwin-6DPose_cleaned/estimation/result/result_m8p4_iphone_0904-1834/checkpoints/epoch_19_dist_0.02502485291669303.pth \
