@@ -8,9 +8,11 @@ pip install ultralytics
 ```
 ```
 dpkg-query -W tensorrt # check your tensorrt version
-python3 -m pip install --upgrade tensorrt
-bash export-seg.sh
-cd yolo-tensorrt
+pip install tensorrt --extra-index-url https://pypi.nvidia.com
 ``` 
+```
+bash export-seg.sh
+bash build-seg.sh
+```
 
 ### Train
