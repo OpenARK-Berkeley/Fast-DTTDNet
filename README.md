@@ -128,12 +128,12 @@ python train.py --dataset ycb --output_dir ./result/train_result --device 0 --ba
 python train.py --dataset dttd --output_dir ./result/train_result --device 0 --batch_size 1 --lr 1e-5 --min_lr 1e-6 --warm_epoch 1
 ```
 
-### Real-time Deployment
+### Real-time Deployment:
 To deploy our DTTD-Net on hardware with TensorRT, you need to have [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#download-the-nvidia-cuda-toolkit) version >= 11.8, and [TensorRT](https://developer.nvidia.com/nvidia-tensorrt-8x-download) >= 8.4
 
 Refer to the submodule [yolo](https://github.com/OpenARK-Berkeley/Fast-DTTDNet/blob/main/submodule/README.md) for detection and masking module deployment.
 
-### Citation
+### Citation:
 If our work is useful or relevant to your research, please kindly recognize our contributions by citing our papers:
 ```
 @misc{DTTDv2,

@@ -1,4 +1,4 @@
-python3 export-seg.py \
+python3 yolo-tensorrt/export-seg.py \
     --weights yolov8s-seg.pt \
     --opset 11 \
     --sim \
