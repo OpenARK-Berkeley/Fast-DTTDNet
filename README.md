@@ -6,6 +6,7 @@ This repository is the implementation code of the paper "Robust Digital-Twin Loc
 In this work, we bridge the existing gap towards mobile AR object tracking scenarios in a dual approach. At the algorithm level, we introduced a novel Transformer-based 6DoF  pose estimator, specifically designed to navigate the complexities introduced by noisy depth data, which is a common issue in mobile AR environments. At the dataset level, on the other hand, we expanded the scope of our previous work [DTTD](https://arxiv.org/abs/2302.05991) by introducing an innovative RGBD dataset captured using the iPhone 14 Pro, thus broadening the applicability of our approach to include iPhone sensor data. 
 
 ### Updates:
+- [x] 11/13/23 We're releasing codes for real-time DTTD-Net deployment with TensorRT and CUDA.
 - [x] 09/28/23 Our trained checkpoints for pose estimator are released [here](https://drive.google.com/drive/folders/128yIostfVzvbTQzoW3GO2MKEm62uTplp?usp=drive_link).
 - [x] 09/27/23 Our dataset: [DTTDv2-IPhoneLiDAR](https://drive.google.com/drive/folders/1U7YJKSrlWOY5h2MJRc_cwJPkQ8600jbd) is released, please check our [official repository](https://github.com/augcog/DTTDv1) for data collection and annotation.
 
@@ -15,6 +16,7 @@ Before running our pose estimation pipeline, you can activate a __conda__ enviro
 ```
 conda create --name [YOUR ENVIR NAME] python = [PYTHON VERSION]
 conda activate [YOUR ENVIR NAME]
+git clone git@github.com:OpenARK-Berkeley/Fast-DTTDNet.git --recursive
 ```
 
 then install all necessary packages:
@@ -125,6 +127,11 @@ Our model is applicable on YCBV_Dataset and DTTD_v1 as well, please try followin
 python train.py --dataset ycb --output_dir ./result/train_result --device 0 --batch_size 1 --lr 8e-5 --min_lr 8e-6 --warm_epoch 1
 python train.py --dataset dttd --output_dir ./result/train_result --device 0 --batch_size 1 --lr 1e-5 --min_lr 1e-6 --warm_epoch 1
 ```
+
+### Real-time Deployment
+To deploy our DTTD-Net on hardware with TensorRT, you need to have [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#download-the-nvidia-cuda-toolkit) version >= 11.8, and [TensorRT](https://developer.nvidia.com/nvidia-tensorrt-8x-download) >= 8.4
+
+Refer to the submodule [yolo](https://github.com/OpenARK-Berkeley/Fast-DTTDNet/blob/main/submodule/README.md) for detection and masking module deployment.
 
 ### Citation
 If our work is useful or relevant to your research, please kindly recognize our contributions by citing our papers:
