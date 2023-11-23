@@ -16,6 +16,7 @@ bash build-seg.sh
 ```
 
 ### Finetune
+To customize the data for detection, check build_dataset.sh
 If we construct the dataset in the format compatible with YOLOv8, it is easy to fine-tune the pre-trained YOLOv8 model.
 ```
 from ultralytics import YOLO
